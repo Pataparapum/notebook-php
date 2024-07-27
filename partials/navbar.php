@@ -32,7 +32,7 @@
             <?php else: ?>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link activate" href="#">Register</a>
+                        <a class="nav-link activate" href="register.php">Register</a>
                     </li>
 
                     <li class="nav-item">

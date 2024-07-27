@@ -6,8 +6,43 @@ body {
     width: 50px;
 }
 
+#formain {
+    margin: auto;
+    width: 450px;
+    height: 450px;
+}
+
+#form {
+    margin-top: 100px;
+    padding: 50px;
+    height: auto;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    background-color: #D6D58E;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
 .welcome {
     background: url('../img/background.jpg');
     background-position: center center;
     background-size: cover;
+}
+
+
+.formulario {
+    width: 400px;
+    user-select: none;
+}
+
+.formItem {
+    margin: 10px 0px 30px 0px;
+}
+
+.inputform{
+    background-color: #F3EFEE;
+    border: 1px solid #F3EFEE;
+    border-radius: 10px;
 }
