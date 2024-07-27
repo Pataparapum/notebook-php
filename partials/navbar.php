@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #005C53;">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse">
-            <a class="navbar-brand font-weight-bold" href="index.php">
-                <img id="logo" class="mr-2 rounded-circle" src="./static/img/logo.jpg">
-            </a>
+        <a class="navbar-brand font-weight-bold" href="index.php">
+            <img id="logo" class="mr-2 rounded-circle" src="./static/img/logo.jpg">
+        </a>
+        <div class="collapse navbar-collapse d-flex justify-content-end">
             <button
                 class="navbar-toggler"
                 type="button"
@@ -15,26 +15,32 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <ul class="navbar-nav">
-                <?php if (isset($_SESSION['user'])): ?>
+            <?php if (isset($_SESSION['user'])): ?>
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link activate" href="#">Home</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link actiavate" href="#">Add note</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link actiavate" href="#">Log out</a>
                     </li>
-                <?php else: ?>
+                </ul>
+            <?php else: ?>
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link activate" href="#">Register</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link actiavate" href="#">Login</a>
                     </li>
-                <?php endif ?>
+                </ul>
+                
+            <?php endif ?>
             </ul>
         </div>
     </div>
