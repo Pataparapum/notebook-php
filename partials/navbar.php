@@ -15,33 +15,36 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <?php if (isset($_SESSION['user'])): ?>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link activate" href="#">Home</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="d-flex justify-content-between w-100">
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link activate" href="principal.php">Home</a>
+                            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link actiavate" href="#">Add note</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link actiavate" href="addnote.php">Add note</a>
+                            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link actiavate" href="#">Log out</a>
-                    </li>
-                </ul>
-            <?php else: ?>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link activate" href="register.php">Register</a>
-                    </li>
+                            <li class="nav-item">
+                                <a class="nav-link actiavate" href="#">Log out</a>
+                            </li>
+                        </ul>
+                    <?php else: ?>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link activate" href="register.php">Register</a>
+                            </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link actiavate" href="#">Login</a>
-                    </li>
-                </ul>
-                
-            <?php endif ?>
-            </ul>
+                            <li class="nav-item">
+                                <a class="nav-link actiavate" href="login.php">Login</a>
+                            </li>
+                        </ul>
+                    <?php endif ?>
+                </div>
+            </div>
+           
         </div>
     </div>
 </nav>

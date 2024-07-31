@@ -4,7 +4,7 @@
   $error = null;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_password)) {
+    if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["password"])) {
       $error = "Please fill all the fileds.";
     } else if (!str_contains($_POST["email"], "@")) {
       $error = "Email format is incorrect.";
@@ -17,14 +17,14 @@
         $error = "This email is taken.";
       } else {
         $conn
-          ->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password")
+          ->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)")
           ->execute([
             ":name" => $_POST["name"],
             ":email" => $_POST["email"],
-            ":password" => password_hash($_post["password"], PASSWORD_BCRYPT)
+            ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)
           ]);
 
-          $statement = $CONN->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
+          $statement = $conn->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
           $statement->bindParam(":email", $_POST["email"]);
           $statement->execute();
 
@@ -47,7 +47,7 @@
 
       <div class="formItem mb-3">
         <label for="name" class="form-label">User name</label>
-        <input type="text" class="inputform form-control" id="name" name="user">
+        <input type="text" class="inputform form-control" id="name" name="name">
       </div>
 
       <div class="formItem mb-3">
