@@ -28,7 +28,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link actiavate" href="#">Log out</a>
+                                <a class="nav-link actiavate" href="logout.php">Log out</a>
                             </li>
                         </ul>
                     <?php else: ?>
