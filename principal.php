@@ -33,6 +33,8 @@
               <h5 class="card-title"><?= $note["title"] ?></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"><?= $note["date"]?></h6>
               <p class="card-text"><?= $note["content"] ?></p>
+              <a href="update.php?id=<?= $note["id"]?>" class="btn btn-secondary mb-2">Modificar nota</a>
+              <a href="delete.php?id=<?= $note["id"]?>" class="btn btn-danger mb-2">Borrar nota</a>
             </div>
           </div>
         </div>
